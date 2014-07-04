@@ -152,12 +152,12 @@ public class CountDownView extends TextView {
 
       if (mMinute != null) {
         int t = time / MINUTE;
-        timeStr.append(mHour == null ? t : formatTime(t) + mMinute + " ");
+        timeStr.append((mHour == null ? t : formatTime(t)) + mMinute + " ");
         time = time % MINUTE;
       }
 
       if (mSecond != null) {
-        timeStr.append(mMinute == null ? time : formatTime(time) + mSecond);
+        timeStr.append((mMinute == null ? time : formatTime(time)) + mSecond);
       } else {
         timeStr.append(time);
       }
