@@ -65,7 +65,11 @@ public class CountDownView extends TextView {
   }
 
   public void setCountTime(int time) {
-    setCountTime(getContext().getResources().getString(time));
+    this.mCountTime = time;
+  }
+
+  public void setCountTimeByRes(int res) {
+    setCountTime(getContext().getResources().getString(res));
   }
 
   private void checkIsValid(String time) {

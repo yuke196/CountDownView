@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yuke.activity.TestActivity">
+
+  <com.yuke.view.CountDownView
+      android:layout_marginTop="50dp"
+      android:id="@+id/test"
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  <EditText
+      android:id="@+id/count"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  <LinearLayout
+      android:layout_marginTop="50dp"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:gravity="center"
+      android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/start"
+        android:text="开始"
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/stop"
+        android:text="结束"
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+
+</LinearLayout>
