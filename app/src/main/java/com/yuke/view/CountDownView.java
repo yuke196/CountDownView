@@ -97,7 +97,14 @@ public class CountDownView extends TextView {
     new Thread(mCountRunnable).start();
   }
 
-  public void stop() {
+  public void clear() {
+    if (mCountRunnable != null) {
+      mCountRunnable.stopCount();
+    }
+    this.setText("");
+  }
+
+  public void stopCount() {
     mCountRunnable.stopCount();
   }
 
