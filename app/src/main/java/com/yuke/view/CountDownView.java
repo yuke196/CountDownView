@@ -146,7 +146,7 @@ public class CountDownView extends TextView {
 
       if (mHour != null) {
         int t = time / HOUR;
-        timeStr.append(mDay == null ? t : formatTime(t) + mHour + " ");
+        timeStr.append((mDay == null ? t : formatTime(t)) + mHour + " ");
         time = time % HOUR;
       }
 
