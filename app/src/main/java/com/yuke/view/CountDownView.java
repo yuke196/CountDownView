@@ -18,6 +18,8 @@ public class CountDownView extends TextView {
   private static final int HOUR = 3600;
   private static final int MINUTE = 60;
 
+  private CountOver mCountOver;
+
   private int mCountTime = 0;
   private TimeHandler mTimeHandler;
   private CountRunnable mCountRunnable;
@@ -60,6 +62,9 @@ public class CountDownView extends TextView {
       return mCountTime--;
     } else {
       mCountRunnable.stopCount();
+      if (mCountOver != null) {
+        mCountOver.onCountOver();
+      }
       return mCountTime;
     }
   }
@@ -102,6 +107,10 @@ public class CountDownView extends TextView {
       mCountRunnable.stopCount();
     }
     this.setText("");
+  }
+
+  public void setOnCountOverListener(CountOver countOver) {
+    this.mCountOver = countOver;
   }
 
   public void stopCount() {
@@ -169,5 +178,9 @@ public class CountDownView extends TextView {
     public void stopCount() {
       this.isRunning = false;
     }
+  }
+
+  interface CountOver {
+    void onCountOver();
   }
 }
