@@ -70,6 +70,9 @@ public class CountDownView extends TextView {
   }
 
   public void setCountTime(int time) {
+    if (time < 0) {
+      throw new IllegalArgumentException("count time must be positive number");
+    }
     this.mCountTime = time;
   }
 
