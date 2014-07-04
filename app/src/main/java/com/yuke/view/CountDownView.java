@@ -117,7 +117,9 @@ public class CountDownView extends TextView {
   }
 
   public void stopCount() {
-    mCountRunnable.stopCount();
+    if (mCountRunnable != null) {
+      mCountRunnable.stopCount();
+    }
   }
 
   private class TimeHandler extends Handler {
