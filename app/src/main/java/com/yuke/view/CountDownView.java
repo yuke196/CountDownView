@@ -183,7 +183,7 @@ public class CountDownView extends TextView {
     }
   }
 
-  interface CountOver {
+  public interface CountOver {
     void onCountOver();
   }
 }
