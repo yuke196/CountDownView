@@ -24,6 +24,7 @@ public class CountDownView extends TextView {
   private TimeHandler mTimeHandler;
   private CountRunnable mCountRunnable;
   private String mDay, mHour, mMinute, mSecond;
+  private boolean isFormate = true;
 
   public CountDownView(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -78,6 +79,10 @@ public class CountDownView extends TextView {
 
   public void setCountTimeByRes(int res) {
     setCountTime(getContext().getResources().getString(res));
+  }
+
+  private void setFormate(boolean isFormate) {
+    this.isFormate = isFormate;
   }
 
   private void checkIsValid(String time) {
@@ -140,17 +145,19 @@ public class CountDownView extends TextView {
       }
 
       if (mHour != null) {
-        timeStr.append(time / HOUR + mHour + " ");
+        int t = time / HOUR;
+        timeStr.append(mDay == null ? t : formatTime(t) + mHour + " ");
         time = time % HOUR;
       }
 
       if (mMinute != null) {
-        timeStr.append(time / MINUTE + mMinute + " ");
+        int t = time / MINUTE;
+        timeStr.append(mHour == null ? t : formatTime(t) + mMinute + " ");
         time = time % MINUTE;
       }
 
       if (mSecond != null) {
-        timeStr.append(time + mSecond);
+        timeStr.append(mMinute == null ? time : formatTime(time) + mSecond);
       } else {
         timeStr.append(time);
       }
@@ -187,5 +194,9 @@ public class CountDownView extends TextView {
 
   public interface CountOver {
     void onCountOver();
+  }
+
+  private String formatTime(int time) {
+    return !isFormate ? "" + time : (time > 9 ? "" + time : "0" + time);
   }
 }

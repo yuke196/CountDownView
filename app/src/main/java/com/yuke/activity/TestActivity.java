@@ -37,7 +37,7 @@ public class TestActivity extends Activity {
         break;
 
       case R.id.stop:
-        mcdv.stop();
+        mcdv.stopCount();
         break;
     }
   }
