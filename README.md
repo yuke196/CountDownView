@@ -55,9 +55,7 @@ mCountDownView.setOnCountOverListener(new CountDownView.CountOver() {
 `````
  
  
-|
-|---:
-|nchor's homePage :[yuke](http://sharyuke.com)
+anchor's homePage :[yuke](http://sharyuke.com)
 
 
 * tips: the newest version is 0.0.4
