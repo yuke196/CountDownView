@@ -177,7 +177,7 @@ public class CountDownView extends TextView {
   }
 
   /**
-   * 停止倒计时
+   * 暂停倒计时
    */
   public void stopCount() {
     if (mTimeHandler != null) {
@@ -231,6 +231,9 @@ public class CountDownView extends TextView {
    * 倒计时回调接口
    */
   public interface CountOver {
+    /**
+     * 回调方法
+     */
     void onCountOver();
   }
 
