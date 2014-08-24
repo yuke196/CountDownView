@@ -2,7 +2,8 @@ CountDownView
 ===
 ===
 ###what is this
-show a TextView which can count down time
+
+show a **`android TextView`** which can count down time
 
 ===
 ###useage
