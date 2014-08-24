@@ -22,8 +22,6 @@ config your dependencies in your app module as this
 
 
 
-* tips: the newest version is 0.0.4
-
 * #####code in java file
 
 start counting
@@ -57,12 +55,12 @@ mCountDownView.setOnCountOverListener(new CountDownView.CountOver() {
 `````
  
  
- 
- 
- 
 |
-||---:
+|---:
 |nchor's homePage :[yuke](http://sharyuke.com)
+
+
+* tips: the newest version is 0.0.4
 
 
 
