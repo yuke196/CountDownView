@@ -24,7 +24,7 @@ public class CountDownView extends TextView {
   private TimeHandler mTimeHandler;
   private CountRunnable mCountRunnable;
   private String mDay, mHour, mMinute, mSecond;
-  private boolean isFormate = true;
+  private boolean isFormat = true;
 
   public CountDownView(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -81,8 +81,8 @@ public class CountDownView extends TextView {
     setCountTime(getContext().getResources().getString(res));
   }
 
-  private void setFormate(boolean isFormate) {
-    this.isFormate = isFormate;
+  public void setFormat(boolean isFormat) {
+    this.isFormat = isFormat;
   }
 
   private void checkIsValid(String time) {
@@ -197,6 +197,6 @@ public class CountDownView extends TextView {
   }
 
   private String formatTime(int time) {
-    return !isFormate ? "" + time : (time > 9 ? "" + time : "0" + time);
+    return !isFormat ? "" + time : (time > 9 ? "" + time : "0" + time);
   }
 }
