@@ -12,7 +12,7 @@ show a **`android TextView`** which can count down time
 
 - if you are using android studio ,you can use this view with follow simple config:
 
-config your dependencies in your app module as this
+config your build.gradle dependencies in your app module as this
 
     dependencies {
                compile 'com.sharyuke.view:sharyuke-view:0.0.4'
