@@ -1,4 +1,4 @@
-package com.yuke.view;
+package com.sharyuke.view;
 
 import android.content.Context;
 import android.os.Handler;
@@ -17,6 +17,7 @@ public class CountDownView extends TextView {
   private static final int DAY = 86400;
   private static final int HOUR = 3600;
   private static final int MINUTE = 60;
+  private static final int SECOND = 1000;
 
   private CountOver mCountOver;
 
@@ -180,7 +181,7 @@ public class CountDownView extends TextView {
       while (isRunning) {
         mHandler.sendEmptyMessage(0x001);
         try {
-          Thread.sleep(1000);
+          Thread.sleep(SECOND);
         } catch (Exception e) {
           Log.e(TAG, e.getMessage());
         }
