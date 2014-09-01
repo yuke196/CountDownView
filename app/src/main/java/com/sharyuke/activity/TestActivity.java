@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.sharyuke.R;
 import com.sharyuke.view.CountDownView;
-import shiliangyu.myapplication.R;
 
 public class TestActivity extends Activity {
 
