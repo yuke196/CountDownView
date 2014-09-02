@@ -22,10 +22,6 @@ public class CountDownView extends TextView {
    * 计时状态
    */
   private static final int STATUS_COUNTING = 0x001;
-  /**
-   * 停止状态
-   */
-  private static final int STATUS_STOP = 0x002;
 
   private CountOver mCountOver;
 
@@ -186,7 +182,6 @@ public class CountDownView extends TextView {
   public void stopCount() {
     if (mTimeHandler != null) {
       mTimeHandler.removeMessages(STATUS_COUNTING);
-      mTimeHandler.sendEmptyMessageDelayed(STATUS_STOP, 0);
     }
   }
 
@@ -201,13 +196,9 @@ public class CountDownView extends TextView {
     public void handleMessage(Message msg) {
       super.handleMessage(msg);
 
-      int time = tv.getTime();
+      sendEmptyMessageDelayed(STATUS_COUNTING, SECOND);
 
-      if (msg.what == STATUS_COUNTING) {
-        sendEmptyMessageDelayed(STATUS_COUNTING, SECOND);
-      } else {
-        return;
-      }
+      int time = tv.getTime();
       StringBuilder timeStr = new StringBuilder();
       if (mDay != null) {
         timeStr.append(time / DAY + mDay + " ");

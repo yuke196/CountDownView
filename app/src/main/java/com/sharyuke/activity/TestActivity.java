@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import android.widget.Toast;
 import com.sharyuke.R;
 import com.sharyuke.view.CountDownView;
 
@@ -25,6 +26,12 @@ public class TestActivity extends Activity {
     et = (EditText) findViewById(R.id.count);
 
     mcdv.setUnits("天", "时", "分", "秒");
+    mcdv.setOnCountOverListener(new CountDownView.CountOver() {
+      @Override
+      public void onCountOver() {
+        Toast.makeText(TestActivity.this, "回调了！！！", Toast.LENGTH_LONG).show();
+      }
+    });
   }
 
   public void click(View v) {
