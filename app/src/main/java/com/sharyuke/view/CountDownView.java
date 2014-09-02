@@ -201,12 +201,13 @@ public class CountDownView extends TextView {
     public void handleMessage(Message msg) {
       super.handleMessage(msg);
 
+      int time = tv.getTime();
+
       if (msg.what == STATUS_COUNTING) {
         sendEmptyMessageDelayed(STATUS_COUNTING, SECOND);
       } else {
         return;
       }
-      int time = tv.getTime();
       StringBuilder timeStr = new StringBuilder();
       if (mDay != null) {
         timeStr.append(time / DAY + mDay + " ");
