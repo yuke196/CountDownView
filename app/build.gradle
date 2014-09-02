@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 16
+  compileSdkVersion 20
   buildToolsVersion "20.0.0"
   defaultConfig {
     applicationId 'view.sharyuke.com'
     minSdkVersion 15
-    targetSdkVersion 16
+    targetSdkVersion 20
     versionCode 1
     versionName "1.0"
   }
