@@ -10,16 +10,16 @@ show a **`android TextView`** which can count down time
 
 * #####configuration
 
-- if you are using android studio ,you can use this view with follow simple config:
+- if you are using **`Android Studio`** ,you can use this view with follow simple config:
 
 config your build.gradle dependencies in your app module as this
 
     dependencies {
-               compile 'com.sharyuke.view:sharyuke-view:0.0.4'
+               compile 'com.sharyuke.view:sharyuke-view:0.0.5'
            }
 
 
-- if you are using eclipse , you can [download](http://search.maven.org/remotecontent?filepath=com/sharyuke/view/sharyuke-view/0.0.4/sharyuke-view-0.0.4.jar) jar file ,and put it into your libs directory.
+- if you are using **`ADT(Android Develop Tools)`** , you can [download](http://search.maven.org/remotecontent?filepath=com/sharyuke/view/sharyuke-view/0.0.5/sharyuke-view-0.0.5.jar) jar file ,and put it into your libs directory.
 
 
 
@@ -59,7 +59,7 @@ mCountDownView.setOnCountOverListener(new CountDownView.CountOver() {
 anchor's homePage :[yuke](http://sharyuke.com)
 
 
-* tips: the newest version is 0.0.4
+* tips: the newest version is 0.0.5
 
 
 
